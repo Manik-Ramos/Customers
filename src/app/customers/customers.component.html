@@ -1,0 +1,9 @@
+<h2>AIG Customers</h2>
+<ul class="customer">
+  <li *ngFor="let c of customer"
+    [class.selected]="c === selectedCustomer"
+    (click)="onSelect(c)">
+    <span class="badge">{{c.id}}</span> {{c.name}}
+  </li>
+</ul>
+<app-customers-detail [customer]="selectedCustomer"></app-customers-detail>
